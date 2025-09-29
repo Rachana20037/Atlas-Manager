@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObject.LoginPage;
 
 public class BaseTest {
 	public static WebDriver driver;
@@ -36,6 +37,7 @@ public class BaseTest {
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
+			
 
 		}
 		
@@ -51,6 +53,8 @@ public class BaseTest {
 		}
 		driver.get(prop.getProperty("testUrl")); //URL
 		driver.manage().window().maximize();
+		
+		 
 	}
 	
 	@AfterMethod
@@ -60,5 +64,11 @@ public class BaseTest {
 		System.out.println("Browser is closed");
 		
 	}
+	
+	// ✅ Reusable login helper
+    public void login(String username, String password) {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.doLogin(username, password);
+    }
 	
 }

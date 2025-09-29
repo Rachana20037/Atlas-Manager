@@ -8,6 +8,7 @@
   <test name="Test">
     <classes>
       <class name="testcases.Login"/>
+      <class name="testcases.Home"/>
     </classes>
   </test>
 </suite>

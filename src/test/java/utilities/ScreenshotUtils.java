@@ -38,17 +38,19 @@ public class ScreenshotUtils {
 	}
 */
 	
-	  public static void takeScreenshot(WebDriver driver, String screenshotName) {
-	        try {
-	            File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-	            String destPath = System.getProperty("user.dir") + "/screenshots/" + screenshotName + "_" + timestamp + ".png";
-	            FileUtils.copyFile(srcFile, new File(destPath));
-	            System.out.println("📸 Screenshot saved at: " + destPath);
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
+	public static void takeScreenshot(WebDriver driver, String screenshotName) {
+	    try {
+	        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+	        String destPath = System.getProperty("user.dir") + "/screenshots/" 
+	                          + screenshotName + "_" + timestamp + ".png";
+	        FileUtils.copyFile(srcFile, new File(destPath));
+	        System.out.println("📸 Screenshot saved at: " + destPath);
+	    } catch (IOException e) {
+	        e.printStackTrace();
 	    }
+	}
+
 	
 	
 	
