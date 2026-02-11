@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-03T15:34:57 IST" name="Default suite" finished-at="2025-09-03T15:35:42 IST" duration-ms="44488">
+    <groups>
+    </groups>
+    <test started-at="2025-09-03T15:34:57 IST" name="Default test" finished-at="2025-09-03T15:35:42 IST" duration-ms="44488">
+      <class name="testcases.Home">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Home@6ed3ccb2]" started-at="2025-09-03T15:34:58 IST" name="setUp" finished-at="2025-09-03T15:35:02 IST" duration-ms="3538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="NavbarClick(java.lang.String,java.lang.String)[pri:0, instance:testcases.Home@6ed3ccb2]" started-at="2025-09-03T15:35:02 IST" name="NavbarClick" data-provider="login_testdata" finished-at="2025-09-03T15:35:38 IST" duration-ms="36814" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[atlas.support@acc.ltd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Atlas@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavbarClick -->
+        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:testcases.Home@6ed3ccb2]" started-at="2025-09-03T15:35:38 IST" name="BrowserClose" finished-at="2025-09-03T15:35:42 IST" duration-ms="3210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+      </class> <!-- testcases.Home -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
